@@ -1,6 +1,10 @@
 "use client";
 
-import Navbar from "@/components/navbar";
+import HeroSection from "@/components/hero";
+import Navbar from "@/components/Navbar";
+
+
+
 
 
 export default function Home() {
@@ -10,14 +14,12 @@ export default function Home() {
       <Navbar />
 
       {/* Page content */}
-      <main className="pt-20 px-6">
+      <main className="">
         {/*  Add Hero Section later */}
+        <HeroSection />
         <section className="text-center mb-12">
           <h1 className="text-4xl font-bold">Welcome to Tezos JH</h1>
-          <p className="text-gray-600 mt-4">
-            Empowering students through blockchain & innovation 🚀
-          </p>
-        </section>
+        </section> 
 
         {/* Team Section */}
       </main>
