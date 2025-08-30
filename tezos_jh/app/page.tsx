@@ -1,5 +1,6 @@
 "use client";
 
+import BoardMembers from "@/components/BoardMembers";
 import HeroSection from "@/components/hero";
 import Navbar from "@/components/Navbar";
 
@@ -20,6 +21,7 @@ export default function Home() {
         <section className="text-center mb-12">
           <h1 className="text-4xl font-bold">Welcome to Tezos JH</h1>
         </section> 
+        < BoardMembers />
 
         {/* Team Section */}
       </main>
