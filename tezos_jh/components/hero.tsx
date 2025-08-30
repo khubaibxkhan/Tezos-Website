@@ -6,14 +6,15 @@ const HeroSection: React.FC = () => {
     <div className="m-0 p-0 box-border relative min-h-screen w-screen flex flex-col">
       {/* Hero Section */}
       <section className="relative flex-1 flex items-center justify-center text-white overflow-hidden">
-        {/* Fixed Background GIF */}
-        <img
-          src="/gif4.gif"
-          alt="Hero Background"
+        {/* Fixed Background Video */}
+        <video
+          src="/bg.mp4"
           className="absolute inset-0 w-full h-full object-cover"
           style={{ minWidth: "100vw", minHeight: "100vh", position: "fixed", zIndex: -1 }}
-          loop
           autoPlay
+          loop
+          muted
+          playsInline
         />
 
         {/* Overlay for darkening */}
@@ -28,11 +29,11 @@ const HeroSection: React.FC = () => {
                 TEZOS
               </h1>
               <h2 className="text-2xl md:text-4xl font-bold mb-8" style={{ fontFamily: "'Roboto', sans-serif" }}>
-                JAMIA HAMDARD
+                &nbsp;JAMIA HAMDARD
               </h2>
-              <p className="text-lg md:text-xl mb-8 max-w-xl mx-auto md:mx-0">
-                A student-driven blockchain community at <b>Jamia Hamdard</b>, fostering innovation, research, and real-world applications on the Tezos blockchain.
-              </p>
+              <div className="ml-[5px]"><p className="text-lg ml-[2px] md:text-xl mb-8 max-w-xl mx-auto md:mx-0">
+              A student-driven blockchain community at <b>Jamia Hamdard</b>, fostering innovation, research, and real-world applications on the Tezos blockchain.
+              </p></div>
 
 
               {/* somcial media */}
