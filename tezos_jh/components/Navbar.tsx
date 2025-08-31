@@ -1,10 +1,14 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react"; // npm install lucide-react
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname(); // detect current route
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -12,49 +16,108 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleResumeDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/resume.pdf";
-    link.download = "KhubaibAhmadKhan_Resume.pdf";
-    link.click();
+  // Animation Variants
+  const navVariants = {
+    hidden: { y: -80, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
+  const menuVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.4, staggerChildren: 0.1 },
+    },
+    exit: { opacity: 0, y: -20, transition: { duration: 0.3 } },
+  };
+
+  const linkVariants = {
+    hidden: { opacity: 0, y: 10 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+  };
+
+  const links = [
+    { name: "Home", path: "/" },
+    { name: "Members", path: "/members" },
+    { name: "Events", path: "/events" },
+    { name: "Blogs", path: "/blogs" },
+    { name: "Connect", path: "/connect" },
+  ];
+
   return (
-    <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent ${
-        scrolled ? "backdrop-blur-md shadow-md" : ""
+    <motion.nav
+      variants={navVariants}
+      initial="hidden"
+      animate="visible"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? "backdrop-blur-md shadow-lg bg-black/40" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
         {/* Logo */}
-        <div className="text-3xl md:text-4xl lg:text-5xl font-light m-0">
-          <img
-            src="/logo.png" // Replace with your logo path
-            alt="Logo"
-            className="h-8 md:h-10 lg:h-12 w-auto"
-          />
-        </div>
+        <motion.div whileHover={{ scale: 1.1 }} className="cursor-pointer">
+          <Link href="/">
+            <img
+              src="/logo.png"
+              alt="Logo"
+              className="h-10 md:h-12 lg:h-14 w-auto"
+            />
+          </Link>
+        </motion.div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-10 text-white tracking-wider">
-          <a href="#home" className="text-base tracking-wider transition-colors hover:text-purple-400">Home</a>
-          <a href="#about_me" className="text-base tracking-wider transition-colors hover:text-purple-400">Members</a>
-          <a href="#skills" className="text-base tracking-wider transition-colors hover:text-purple-400">Events</a>
-          <a href="#projects" className="text-base tracking-wider transition-colors hover:text-purple-400">Blogs</a>
-          <a href="#connect" className="text-base tracking-wider transition-colors hover:text-purple-400">Connect</a>
+        <div className="hidden md:flex space-x-10 text-white tracking-wide">
+          {links.map((link, idx) => (
+            <motion.div
+              key={idx}
+              variants={linkVariants}
+              whileHover={{ scale: 1.1 }}
+              className={`text-base transition-colors relative ${
+                pathname === link.path ? "text-purple-400" : ""
+              }`}
+            >
+              <Link
+                href={link.path}
+                target={link.name === "Members" ? "_blank" : "_self"} // 👈 only Members in new tab
+                rel={link.name === "Members" ? "noopener noreferrer" : undefined}
+              >
+                {link.name}
+              </Link>
+
+              {/* underline animation if active (skip for Members since it’s new tab) */}
+              {pathname === link.path && link.name !== "Members" && (
+                <motion.span
+                  layoutId="underline"
+                  className="absolute left-0 -bottom-1 h-[2px] w-full bg-purple-400 rounded"
+                />
+              )}
+            </motion.div>
+          ))}
         </div>
 
-        {/* Resume Button (Desktop) */}
-        <div className="hidden md:block">
+        {/* Join Us Button (Desktop) */}
+        <motion.div
+          className="hidden md:block"
+          whileHover={{ scale: 1.08 }}
+          whileTap={{ scale: 0.95 }}
+        >
           <button
-            onClick={handleResumeDownload}
-            className="bg-[#a7a7a7] text-black py-3 px-8 rounded-full border-none font-medium transition-all duration-500 hover:bg-white"
+            className="relative bg-gradient-to-r from-purple-500 to-pink-500 
+                       text-white py-2 px-6 rounded-full font-medium
+                       shadow-md transition-all duration-500
+                       hover:shadow-xl hover:from-pink-500 hover:to-purple-500
+                       hover:scale-105 focus:outline-none"
           >
             Join Us
           </button>
-        </div>
+        </motion.div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Toggle */}
         <div className="md:hidden text-white hover:text-purple-300">
           <button onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -62,27 +125,49 @@ export const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
-      {menuOpen && (
-        <div className="md:hidden bg-black/80 backdrop-blur-md text-white uppercase text-sm tracking-wider px-6 py-4 space-y-4">
-          <a href="#home" className="block hover:text-yellow-400" onClick={() => setMenuOpen(false)}>Home</a>
-          <a href="#about_me" className="block hover:text-yellow-400" onClick={() => setMenuOpen(false)}>About Me</a>
-          <a href="#skills" className="block hover:text-yellow-400" onClick={() => setMenuOpen(false)}>Skills</a>
-          <a href="#projects" className="block hover:text-yellow-400" onClick={() => setMenuOpen(false)}>Projects</a>
-          <a href="#experience" className="block hover:text-yellow-400" onClick={() => setMenuOpen(false)}>Experience</a>
-          <a href="#connect" className="block hover:text-yellow-400" onClick={() => setMenuOpen(false)}>Connect</a>
-          <button
-            onClick={() => {
-              handleResumeDownload();
-              setMenuOpen(false);
-            }}
-            className="bg-gray-200 text-black px-5 py-1 rounded-full font-semibold text-sm hover:bg-gray-300 transition w-full"
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            variants={menuVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="md:hidden bg-black/90 backdrop-blur-md text-white uppercase text-sm tracking-wider px-6 py-6 space-y-5"
           >
-            Resume
-          </button>
-        </div>
-      )}
-    </nav>
+            {links.map((link, idx) => (
+              <motion.div
+                key={idx}
+                variants={linkVariants}
+                whileHover={{ scale: 1.05, color: "#a855f7" }}
+                onClick={() => setMenuOpen(false)}
+              >
+                <Link
+                  href={link.path}
+                  target={link.name === "Members" ? "_blank" : "_self"}
+                  rel={link.name === "Members" ? "noopener noreferrer" : undefined}
+                >
+                  {link.name}
+                </Link>
+              </motion.div>
+            ))}
+
+            {/* Mobile Button */}
+            <motion.button
+              whileHover={{ scale: 1.08 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-full relative bg-gradient-to-r from-purple-500 to-pink-500 
+                         text-white px-5 py-2 rounded-full font-semibold text-sm
+                         shadow-md transition-all duration-500
+                         hover:shadow-xl hover:from-pink-500 hover:to-purple-500
+                         hover:scale-105 focus:outline-none"
+            >
+              Join Us
+            </motion.button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.nav>
   );
 };
 

@@ -23,18 +23,18 @@ export default function BoardMembers() {
       id: 2,
       name: "Rahul Singh",
       position: "Chairperson",
-      image: "/rahul-singh.jpg", // Replace with your actual image path
+      image: "/rahul-singh1.jpg", // Replace with your actual image path
       github: "https://github.com/RahulSH004",
       linkedin: "https://www.linkedin.com/in/rahul-singh111 ",
       email: "mailto:rs739025@gmail.com",
     },
     {
       id: 3,
-      name: "Sana Sid",
+      name: "Sana Siddiqui",
       position: "Community Co-Lead",
       image: "/sana-sid.jpg", // Replace with your actual image path
       github: "https://github.com/Sanasid89",
-      linkedin: "https://linkedin.com/in/sanasid",
+      linkedin: "https://www.linkedin.com/in/sana-sid-421ab1277",
       email: "mailto:-siddiquesana239@gmail.com",
     }
   ];
