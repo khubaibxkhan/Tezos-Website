@@ -9,24 +9,24 @@ const CarouselSlider = () => {
   const events = [
     {
       id: 1,
-      title: "Freshers’ Induction Program",
-      date: "27th August 2024",
+      title: "Pathfinder’25 ",
+      date: "27th August 2025",
       description: "Introducing Tezos JH club for the new students",
-      image: "/e1.png"
+      image: "/events/pathfinder.jpg"
     },
     {
       id: 2,
-      title: "Tech Buster Session",
+      title: "Build on Azure (Microsoft)",
       date: "4th September 2024",
       description: "Revealing the tezos website, and introducing Blockchain, Devops,Cybersecurity",
-      image: "/e2.png"
+      image: "/events/azure.jpg"
     },
     {
       id: 3,
-      title: "Git & GitHub Workshop",
+      title: "Profile Building ",
       date: "2nd October 2024",
       description: "Version control and collaborative coding",
-      image: "/e3.png"
+      image: "/events/profile.jpg"
     },
     {
       id: 4,

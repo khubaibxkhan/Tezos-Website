@@ -15,19 +15,9 @@ export default function MemberDetails({ member }: { member: Member }) {
   // Social links array
   const socialLinks = [
     {
-      icon: <FaInstagram />,
-      link: member.instagram,
-      color: "hover:text-pink-500",
-    },
-    {
       icon: <FaLinkedin />,
       link: member.linkedin,
       color: "hover:text-blue-500",
-    },
-    {
-      icon: <FaWhatsapp />,
-      link: member.whatsapp,
-      color: "hover:text-green-500",
     },
     {
       icon: <FaXTwitter />,
@@ -53,6 +43,13 @@ export default function MemberDetails({ member }: { member: Member }) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, type: "spring" }}
     >
+
+      <motion.h3 className="mb-6 text-3xl font-extrabold text-red-300">
+        {member.position}
+        <br/>
+      </motion.h3>
+
+
       {/* Member Image */}
       <motion.img
         src={member.image}
@@ -64,11 +61,17 @@ export default function MemberDetails({ member }: { member: Member }) {
         whileHover={{ scale: 1.08 }}
       />
 
+     
       {/* Name & Course */}
       <motion.h2 className="mt-6 text-3xl font-extrabold text-purple-300">
         {member.name}
       </motion.h2>
       <motion.p className="text-lg text-gray-400">{member.course}</motion.p>
+
+        {/* Bio */}
+      <motion.p className="mt-8 text-center text-gray-300 text-lg leading-relaxed max-w-2xl">
+        {member.bio}
+      </motion.p>
 
       {/* Social Icons */}
       <motion.div className="flex gap-8 mt-8 text-3xl">
@@ -86,10 +89,8 @@ export default function MemberDetails({ member }: { member: Member }) {
         ))}
       </motion.div>
 
-      {/* Bio */}
-      <motion.p className="mt-8 text-center text-gray-300 text-lg leading-relaxed max-w-2xl">
-        {member.bio}
-      </motion.p>
+    
+      
     </motion.div>
   );
 }

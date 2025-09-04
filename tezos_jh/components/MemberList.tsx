@@ -28,6 +28,7 @@ export default function MemberList({
               className="w-14 h-16 object-cover rounded-md border border-purple-600"
             />
             <span className="font-medium">{member.name}</span>
+            <span className="font-extrabold text-red-400">{member.position}</span>
           </motion.li>
         ))}
       </ul>

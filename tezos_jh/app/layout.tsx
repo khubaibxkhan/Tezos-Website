@@ -27,10 +27,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/x-icon" href="/icon1.png" />
+        <link rel="icon" type="image/x-icon" href="/icon2.png" />
         <title>Tezos Jamia Hamdard</title>
       </head>
-      <body className="bg-black">
+      <body className="bg-black overflow-x-hidden">
         {/* Navbar is now conditionally rendered */}
         <NavbarWrapper />
         <main>{children}</main>

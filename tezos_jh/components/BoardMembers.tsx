@@ -30,7 +30,7 @@ export default function BoardMembers() {
     },
     {
       id: 3,
-      name: "Sana Siddiqui",
+      name: "Sana Siddique",
       position: "Community Co-Lead",
       image: "/sana-sid.jpg", // Replace with your actual image path
       github: "https://github.com/Sanasid89",

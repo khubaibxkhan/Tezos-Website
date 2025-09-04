@@ -20,55 +20,77 @@ const TeamSliderCards: React.FC = () => {
   const teams: Team[] = [
     {
       id: 1,
-      name: "Tech Team",
-      description: "Building innovative solutions with cutting-edge technology",
+      name: "CONTENT TEAM",
+      description: "Transforming ideas into words that inform, inspire, and spark innovation. ",
       image: "/tech.jpg",
-      details: "Our tech team consists of passionate developers, engineers, and architects who work together to create scalable, robust applications. We focus on modern technologies and best practices to deliver high-quality software solutions that meet business requirements and exceed user expectations.",
-      memberCount: 12,
-      technologies: ["React", "Node.js", "Python", "AWS", "Docker"],
+      details: "The Content Team gives ideas a powerful voice, turning abstract thoughts into impactful words. They craft engaging narratives around innovation, technology, and community, ensuring every message is clear, meaningful, and inspiring. Through their work, vision transforms into stories that connect deeply with people.",
+      memberCount: 6,
+      technologies: ["Hashnode", "Medium", "Conversational AI",],
       icon: <Code className="w-6 h-6" />,
       color: "bg-blue-500"
     },
     {
       id: 2,
-      name: "Media Team",
-      description: "Creating compelling visual stories and brand experiences",
+      name: "GRAPHICS TEAM",
+      description: "Designing visuals that capture imagination and make innovation unforgettable.",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-      details: "Our media team brings creativity to life through stunning visuals, engaging content, and strategic communication. From photography and videography to graphic design and social media management, we craft compelling narratives that resonate with audiences and strengthen brand identity.",
-      memberCount: 8,
-      technologies: ["Adobe Creative Suite", "Final Cut Pro", "Figma", "Canva"],
+      details: " The Graphics Team turns creativity into visuals that speak louder than words. From posters to digital designs, they capture the spirit of technology and community. Their designs leave lasting impressions, making every initiative stand out with clarity, imagination, and originality.",
+      memberCount: 4,
+      technologies: ["Adobe Illustrator", "Affinity", "Figma", "Canva"],
       icon: <Camera className="w-6 h-6" />,
       color: "bg-purple-500"
     },
     {
       id: 3,
-      name: "Design Team",
-      description: "Crafting beautiful and intuitive user experiences",
+      name: "TECH TEAM",
+      description: "Driving innovation with technology that empowers, connects, and creates impact.",
       image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
-      details: "Our design team focuses on creating user-centered designs that are both beautiful and functional. We conduct user research, create wireframes and prototypes, and develop comprehensive design systems that ensure consistent and delightful user experiences across all touchpoints.",
+      details: " The Tech Team is the backbone of innovation, powering seamless digital solutions and technical excellence. They build, optimize, and manage platforms that ensure smooth functioning. With problem-solving skills and creativity, they transform technology into tools that empower ideas and drive growth.",
       memberCount: 6,
-      technologies: ["Figma", "Sketch", "Adobe XD", "Principle", "InVision"],
+      technologies: ["Next js", "Tailwind", "Node js", "", "InVision"],
       icon: <Palette className="w-6 h-6" />,
       color: "bg-pink-500"
     },
     {
       id: 4,
-      name: "Analytics Team",
-      description: "Turning data into actionable insights and strategies",
+      name: "MEDIA TEAM",
+      description: "Capturing stories, preserving moments, and amplifying voices that matter.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      details: "Our analytics team leverages data science and business intelligence to drive informed decision-making. We analyze user behavior, market trends, and business metrics to provide strategic insights that help optimize performance and identify new growth opportunities.",
-      memberCount: 5,
+      details: " The Media Team preserves milestones and memories through the lens of creativity. They capture stories with photography, videography, and production, amplifying voices and highlighting achievements. Their work ensures that every initiative is remembered, celebrated, and shared with audiences beyond the moment.",
+      memberCount: 4,
       technologies: ["Python", "R", "Tableau", "Google Analytics", "SQL"],
       icon: <BarChart3 className="w-6 h-6" />,
       color: "bg-green-500"
     },
     {
       id: 5,
-      name: "Security Team",
-      description: "Protecting digital assets with comprehensive security measures",
+      name: "Social Media Team",
+      description: "Building digital presence with creativity, consistency, and meaningful connections.",
       image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=400&fit=crop",
-      details: "Our security team ensures the protection of our digital infrastructure and sensitive data. We implement robust security protocols, conduct regular audits, and stay updated with the latest cybersecurity threats to maintain the highest standards of data protection and system integrity.",
-      memberCount: 4,
+      details: "The Social Media Team carries the community’s voice into the digital world. Through engaging posts, creative campaigns, and consistent interaction, they shape a strong online presence. Their efforts foster awareness, connection, and engagement, making technology and innovation accessible to all.",
+      memberCount: 7,
+      technologies: ["Penetration Testing", "Firewall Management", "Encryption", "SIEM"],
+      icon: <Shield className="w-6 h-6" />,
+      color: "bg-red-500"
+    },
+    {
+      id: 6,
+      name: "Public Relations (PR) Team",
+      description: "Building trust, creating connections, and strengthening community image everywhere.",
+      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=400&fit=crop",
+      details: "The PR Team bridges connections between the community and the wider world. They manage communication with professionalism, expand outreach, and ensure a strong, positive image. Through trust and relationship-building, they amplify initiatives and create networks that strengthen the brand.",
+      memberCount: 0,
+      technologies: ["Penetration Testing", "Firewall Management", "Encryption", "SIEM"],
+      icon: <Shield className="w-6 h-6" />,
+      color: "bg-red-500"
+    },
+    {
+      id: 7,
+      name: "Event Management Team",
+      description: "Turning ideas into seamless events and unforgettable experiences",
+      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=400&fit=crop",
+      details: " The Event Management Team transforms vision into experiences that inspire. From planning to flawless execution, they ensure every gathering, seminar, or workshop is impactful and seamless. Their dedication to detail turns ideas into events that bring people together meaningfully.s",
+      memberCount: 0,
       technologies: ["Penetration Testing", "Firewall Management", "Encryption", "SIEM"],
       icon: <Shield className="w-6 h-6" />,
       color: "bg-red-500"
@@ -105,7 +127,7 @@ const TeamSliderCards: React.FC = () => {
 
   return (
     
-    <div className="w-full max-w-4xl mx-auto p-4">
+    <div className="w-full max-w-2xl mx-auto p-4">
 
         <div className="text-center mb-8 sm:mb-12">
         <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">

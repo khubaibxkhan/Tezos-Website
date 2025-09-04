@@ -51,7 +51,7 @@ export const Navbar = () => {
 
   return (
     <motion.nav
-      variants={navVariants}
+      variants ={navVariants}
       initial="hidden"
       animate="visible"
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
@@ -113,7 +113,7 @@ export const Navbar = () => {
                        hover:shadow-xl hover:from-pink-500 hover:to-purple-500
                        hover:scale-105 focus:outline-none"
           >
-            Join Us
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSez2eFOWo1-tg3415GIub6zA4LhOSeAW35FSe4pbOaAJ7W6Ew/viewform">Join Us</a>
           </button>
         </motion.div>
 
