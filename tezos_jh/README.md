@@ -16,10 +16,9 @@ Built with scalable and maintainable code
 
 🛠️ Tech Stack
 
-Frontend: HTML, CSS, JavaScript (or React/Next.js if used)
+Frontend: Next js , React , Typescript , Html and Tailwind CSS
 
-Design: Figma, Canva (if applicable)
-
+Design: Canva
 Version Control: Git & GitHub
 
 👨‍💻 Team Members
