@@ -82,9 +82,7 @@ export const Navbar = () => {
               }`}
             >
               <Link
-                href={link.path}
-                target={link.name === "Members" ? "_blank" : "_self"} // 👈 only Members in new tab
-                rel={link.name === "Members" ? "noopener noreferrer" : undefined}
+                href={link.path}// 👈 only Members in new tab
               >
                 {link.name}
               </Link>

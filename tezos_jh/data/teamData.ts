@@ -4,7 +4,7 @@ export interface Member {
   position:string;
   course: string;
   image: string;
-
+  location: string;
   linkedin: string;
 
   x: string;
@@ -23,8 +23,9 @@ export const teamData: Record<string, Member[]> = {
       linkedin: "https://www.linkedin.com/in/hamzarizzvi/",
       x: "https://x.com/hamzarizzvi",
       github: "https://github.com/john",
-      gmail: "mailto:mostuselessboy@gmail.com",
+      gmail: "mostuselessboy@gmail.com",
       bio: "I like chicken nuggets, and coding.",
+      location: "Delhi,India",
     },
     {
       name: "Samia Abid ",
@@ -36,10 +37,11 @@ export const teamData: Record<string, Member[]> = {
       github: "https://github.com/samiaabid06",
       gmail: "mailto:samiakhan5236@gmail.com",
       bio: "I am Samia Abid  3rd-year B.Tech CSE student and Tezos Tech Co-Head, skilled in web development and cloud technology.",
+      location: "Delhi,India",
     },
     {
       name: "Khubaib Ahmad Khan",
-      position: "Co-ordinator",
+      position: "Coordinator",
       course: "B.Tech CSE, 2nd Year",
       image: "/members/me.jpg",
       linkedin: "https://www.linkedin.com/in/khubaibxkhan/",
@@ -47,6 +49,7 @@ export const teamData: Record<string, Member[]> = {
       github: "https://github.com/khubaibxkhan",
       gmail: "mailto: khubaibxkhan22@gmail.com",
       bio: "CS Major & Full-Stack Developer | Building Modern, Scalable & AI-Powered Web Applications.",
+      location: "Delhi,India",
     },
     {
       name: "Mohammad Taaha Ashraf",
@@ -58,6 +61,7 @@ export const teamData: Record<string, Member[]> = {
       github: "https://github.com/m-taaha",
       gmail: "mailto: mtaahaashraf@gmail.com",
       bio: "Hi, I am Mohammad Taaha Ashraf, currently in Btech CSE 3rd year - skilled in FullStack - exploring Web3 . ",
+      location: "Delhi,India",
     },
     {
       name: "Laiba Zeeai",
@@ -69,6 +73,7 @@ export const teamData: Record<string, Member[]> = {
       github: "LaibaZeeai",
       gmail: "mailto: zeeailaiba@gmail.com",
       bio: "Skilled in web dev (reactjs, nextjs) | diving into cyber security| done advance diploma in soft engineering",
+      location: "Delhi,India",
     },
     {
       name: "Faraz Khan",
@@ -80,6 +85,7 @@ export const teamData: Record<string, Member[]> = {
       github: "https://github.com/Adroxz1122",
       gmail: "mailto: mfarazkhan2002@gmail.com",
       bio: "I’m into cybersecurity, enjoy boxing to stay sharp, and spend my downtime playing Warzone",
+      location: "Delhi,India",
     },
     {
       name: "Mohd Maaz",
@@ -91,6 +97,7 @@ export const teamData: Record<string, Member[]> = {
       github: "https://github.com/Maaz-glitchh",
       gmail: "mailto: formohdmaaz@gmail.com",
       bio: "Maaz, Second year B.Tech AI student who's really interested in the blockchain technology and web3.",
+      location: "Delhi,India",
     },
     {
       name: "Syed Numair",
@@ -102,6 +109,7 @@ export const teamData: Record<string, Member[]> = {
       github: "https://github.com/syednumair",
       gmail: "mailto: syednumair004@gmail.com",
       bio: "Hey, I’m Numair,Third Year B.Tech-CSE student interested in AI/ML currently doing web dev.",
+      location: "Delhi,India",
     },
     {
       name: "Mohammad Danish",
@@ -113,6 +121,7 @@ export const teamData: Record<string, Member[]> = {
       github: "https://github.com/Mohammad-Danish-sab",
       gmail: "mailto: Danish.sab05@gmail.com",
       bio: "Hi, my name is Mohammad Danish. I am a 3rd Year Computer Science student at Jamia Hamdard. I have an interest in web development and I am also studying data structures and algorithms to improve my programming skills. Apart from studies. In my free time, I like exploring new technologies.",
+      location: "Delhi,India",
     },
     {
       name: "Syed Azhar Mohammad",
@@ -124,6 +133,7 @@ export const teamData: Record<string, Member[]> = {
       github: "https://github.com/sazhar111",
       gmail: "mailto: syedazhar111@gmail.com",
       bio: "My name is Syed Azhar Mohammad. I am a 3rd Year Computer Science student at Jamia Hamdard. I have an interest in web development currently. In my free time, I like writing. ",
+      location: "Delhi,India",
     },
     {
       name: " Nameer Ahmad",
@@ -135,6 +145,7 @@ export const teamData: Record<string, Member[]> = {
       github: " https://github.com/devnameer",
       gmail: "mailto: nameer@9310@gmail.com",
       bio: " Hi, my name is Nameer Ahmad. I am currently a B.Tech CSE 3rd-year student. I am a tech member of the Tezos Jamia Hamdard club. I have developed skills in data science and web development. ",
+      location: "Delhi,India",
     },
   ],
   "PR Team": [
@@ -147,6 +158,7 @@ export const teamData: Record<string, Member[]> = {
       x: "null",
       github: "LaibaZeeai",
       gmail: "mailto: zeeailaiba@gmail.com",
+      location: "Delhi,India",
       bio: "Diving into tech | To fill up the empty space in resume/portfolio following up the extra curriculum activities such as pr / event management 🫣",
     },
     {
@@ -158,6 +170,7 @@ export const teamData: Record<string, Member[]> = {
       x: "https://x.com/esiddiqui30?t=Y9WUUb0whblYmoPCJUOTNw&s=09 ",
       github: "nill",
       gmail: "siddiqui.eram987@gmail.com",
+      location: "Delhi,India",
       bio: "Being a PyaR Coordinator means building meaningful collaborations, amplifying sponsor partnerships, and crafting innovative narratives that inspire and endure.",
     },
     {
@@ -169,6 +182,7 @@ export const teamData: Record<string, Member[]> = {
     x: "https://x.com/raza_arham_",
     github: "null",
     gmail: "mailto:Razaarham35@gmail.com",
+    location: "Delhi,India",
     bio: "Am a student at Jamia Hamdard, I balance my studies with a passion for exploring new places. Travel enriches my education by providing unique perspectives and real-world experiences.\n"
   },
     {
@@ -181,6 +195,7 @@ export const teamData: Record<string, Member[]> = {
       github: "",
       gmail: "mailto: nabhan.ahmad007@gmail.com",
       bio: " I like cars and food👍🏿",
+      location: "Delhi,India",
     },
     {
       name: "Bushra Shams",
@@ -192,6 +207,7 @@ export const teamData: Record<string, Member[]> = {
       github: "",
       gmail: "bushrashamsxb08@gmail.com",
       bio: "Learning, creating, and contributing as a member of the Tezos PR Board.",
+      location: "Delhi,India",
     },
     
 
@@ -199,6 +215,7 @@ export const teamData: Record<string, Member[]> = {
   "Content Team": [
     {
       name: "Anamta Karim",
+      location: "Delhi,India",
       position: "Head",
       course:"B.Tech AI, 3rd Year",
       image: "/members/anamta.jpg",
@@ -217,6 +234,7 @@ export const teamData: Record<string, Member[]> = {
     x: "null",
     github: "null",
     gmail: "mailto:alfiya.rizvi.01@gmail.com",
+    location: "Delhi,India",
     bio: "My name is Alfiya Rizvi and I am a Final year BBA Student at Jamia Hamdard University. Currently I am working as a content Admin at Tezos club."
   },
   {
@@ -227,6 +245,7 @@ export const teamData: Record<string, Member[]> = {
     linkedin: "https://www.linkedin.com/in/areeba-aslam-259433340/",
     x: "https://x.com/aslamareeba77",
     github: "no",
+    location: "Delhi,India",
     gmail: "mailto:aslamareeba77@gmail.com",
     bio: "I\u2019m Areeba Aslam, the Content Coordinator at Tezos JH. I love turning ideas into stories that actually click, creative, clear, and a little bit quirky. Because at the end of the day, content should connect, inspire, and most importantly-fun toh rukna hi nahi chahiye, doston! "
   },
@@ -239,16 +258,18 @@ export const teamData: Record<string, Member[]> = {
     x: "https://x.com/_al1yaaa_?t=J0-XKqzSltUmE6BO_X_F6g&s=09",
     github: "null",
     gmail: "mailto:aliyanad04@gmail.com",
+    location: "Delhi,India",
     bio: "hii, I\u2019m Aliya, the club\u2019s Content Coordinator. i wrangle words, chase ideas, and make sure our stories shine. if it looks fun online, chances are I had way too much fun writing it ^-^"
   },
   {
     name: "Heba Faisal",
     position: "Member ",
     course: "B.Tech CSE, 2nd Year",
-    image: "/members/",
+    image: "/members/Heba.jpg",
     linkedin: "WWW.linkedin.com/in/hebafaisal",
     x: "Null",
     github: "null",
+    location: "Delhi,India",
     gmail: "mailto:Faisalheba9@gmail.com",
     bio: "Member of the Tezos Content Team ^-^, passionate about creating engaging and impactful content. I aim to simplify ideas, connect with the community, and contribute to Tezos\u2019 growth."
   },
@@ -261,7 +282,8 @@ export const teamData: Record<string, Member[]> = {
     x: "https://x.com/HammadKhan5445?t=5E79wxyZ2ZM15OfEJCTyIQ&s=08",
     github: "null",
     gmail: "mailto:hammad.a.ishtiyaqkhan@gmail.com",
-    bio: "A second year Btech. student with nack for basketball and singing and a passion for game dev."
+    bio: "A second year Btech. student with nack for basketball and singing and a passion for game dev.",
+    location: "Delhi,India",
   },
   {
     name: "Mohammad Maaz ",
@@ -270,6 +292,7 @@ export const teamData: Record<string, Member[]> = {
     image: "/members/Maaz_content.webp",
     "linkedin": "https://www.linkedin.com/in/maaz-m-840b2937a",
     x: "https://x.com/Maaz__26?t=0zH1W_ogN8nbSiWq2lahbw&s=08",
+    location: "Delhi,India",
     github: "null",
     gmail: "mailto:maazdl001@gmail.com",
     bio: "Myself Maaz a member of Content Team at Tezos JH passionate about Blockchain and community growth , contribute actively to digital initiatives."
@@ -284,6 +307,7 @@ export const teamData: Record<string, Member[]> = {
     linkedin: "www.linkedin.com/in/arish-ansari-693b77276",
     x: "https://x.com/Arish8901",
     github: "null",
+    location: "Delhi,India",
     gmail: "mailto:ansariarish8901@gmail.com",
     bio: "I’m Arish Ansari, Social Media Head of Tezos Club. I look after our social channels, highlight club activities, and help grow Tezos awareness among students.",
   },
@@ -295,6 +319,7 @@ export const teamData: Record<string, Member[]> = {
     linkedin: "https://www.linkedin.com/in/shezanali?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     x: "https://x.com/heyshezan?s=21",
     github: "null",
+    location: "Delhi,India",
     gmail: "mailto:shezanaliy@gmail.com",
     bio: "My job is to make Tezos go viral. I’m building our presence and sparking conversations across the digital world.\n\n​I co-lead our social media game.",
   },
@@ -307,6 +332,7 @@ export const teamData: Record<string, Member[]> = {
     x: "https://x.com/NaziaKhatu79980?t=cMFeN9spgWkre3HEnaSh6w&s=09",
     github: "null",
     gmail: "mailto:naziakhatun1257@gmail.com",
+    location: "Delhi,India",
     bio: "I'm Nazia, a 4th-year B.Tech CSE student at Jamia Hamdard. I'm passionate about technology and innovation, with a keen interest in exploring new trends and advancements in the field of computer science and engineering.",
   },
   {
@@ -318,6 +344,7 @@ export const teamData: Record<string, Member[]> = {
     x: "https://x.com/ToobaSiddiqui08",
     github: "null",
     gmail: "mailto:tooba0807@gmail.com",
+    location: "Delhi,India",
     bio: "I’m Tooba Siddiqui, Social Media Team Coordinator at Tezos JH. From past experiences in student communities to leading creative projects, I love bringing stories to life and adding a fun twist to social media.",
   },
   {
@@ -328,6 +355,7 @@ export const teamData: Record<string, Member[]> = {
     linkedin: "https://www.linkedin.com/in/sadafnasim458?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     x: "None",
     github: "null",
+    location: "Delhi,India",
     gmail: "mailto:sadafnaseem458@gmail.com",
     bio: "I am Sadaf Nasim, a Computer Science student with an interest in full stack development.\nAlong with technical learning, I actively involve myself in digital and social media activities to strengthen communication skills.",
   }
